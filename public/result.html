@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourGether Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="title-banner">
+        <h1>TourGether</h1>
+    </header>
+    <section class="results-section">
+        <h2>Your Itinerary</h2>
+        <pre id="results"></pre>
+        <button onclick="location.href='index.html'">Back to Home</button>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const data = params.get('data');
+            document.getElementById('results').textContent = decodeURIComponent(data);
+        });
+    </script>
+</body>
+</html>

@@ -14,7 +14,7 @@
     }
   
   .title-banner {
-    background-image:url('Images/sky.jpg');
+    background-image:url("images/sky.jpg");
     background-size: cover;
     text-align: center;
     padding: 10px 0;
@@ -172,12 +172,10 @@
   }
   
   .card img {
-    width: 100%;        /* Makes the image fill the width of the card */
-    height: 300px;      /* Set a fixed height */
-    object-fit: cover;  /* Scales the image to fill the given dimensions */
-    margin-bottom: 10px;
-}
-}
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
   
   .start-section {
     text-align: center;
@@ -192,9 +190,9 @@
     background: linear-gradient(to bottom, #28a745, #218838); /* Gradient background for 3D effect */
     color: white;
     padding: 50px 40px;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
+    border: solid green;
+    border-radius: 60%;
+    font-size: 45px;
     cursor: pointer;
     box-shadow: 0 5px #1e7e34, 0 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for 3D effect */
     transition: all 0.2s ease; /* Smooth transition for the hover effect */
@@ -203,24 +201,24 @@
   .start-button:hover {
     background: linear-gradient(to bottom, #218838, #1e7e34);
     box-shadow: 0 2px #1e7e34, 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(5px); /* Push button down on hover */
+    transform: translateY(10px); /* Push button down on hover */
   }
   
   .start-button:active {
     box-shadow: 0 1px #1e7e34, 0 1px 2px rgba(0, 0, 0, 0.2);
-    transform: translateY(4px); /* Further push button down on active */
+    transform: translateY(10px); /* Further push button down on active */
   }
   
   .footer {
     color: rgb(247, 237, 237);
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
     padding: 100px 0;
     margin: auto;
     padding: 10px;
     max-width: 1000px; /* Set the max width to match the width of other sections */
     margin: 0 auto; /* Center the footer */
-    background-color:#5ea3ff;
+    background-color:#5ea4fff6;
   
   }
   
@@ -250,7 +248,7 @@
   
   .popup-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 2px solid #350dea;
     width: 80%;
@@ -259,6 +257,7 @@
   }
   
   .popup-content h2 {
+    font-size: large;
     margin-top: 0;
   }
   

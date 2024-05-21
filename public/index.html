@@ -47,8 +47,9 @@
 <!-- CARDS-->
 <section class="card-section">
     <div class="card">
-        <img src="Images/pic1.png" alt="Image 1">
-        <h3><mark>Step 1:</mark> Answer these questions:</h3>
+        <img src="images/pic1.png" alt="Image 1">
+        <h3><mark><br/>
+            Step 1:</mark> Answer these questions:</h3>
             <ol>
                 <li>Location - where are you going?</li>
                 <li>Duration - for how long? </li>
@@ -57,14 +58,15 @@
         </p>
     </div>
     <div class="card">
-        <img src="Images/pic2.png" alt="Image 2">
+        <img src="images/pic2.png" alt="Image 2">
         <h3><mark>Step 2:</mark> Rank'em!</h3>
         <p> <br/> Each member will take turns ranking the places/activities he/she wants to go/do from a list. </p>
     </div>
     <div class="card">
-        <img src="Images/pic3.png" alt="Image 3">
+        <img src="images/pic3.png" alt="Image 3">
         <h3><mark>Step 3:</mark> Populate your itinerary!</h3>
-        <p>The application will consolidate everyone's selection and generate the results. You can then populate them into your itinerary!</p>
+        <p>The application will consolidate everyone's selection and generate the results. <br/> <br/>You can then populate them into your itinerary!
+        </p>
     </div>  
 </section>
 
@@ -76,30 +78,31 @@
 <!-- Popup form -->
 <div id="popupForm" class="popup-form">
     <div class="popup-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-          <h2>Step 1: Answer the following questions:</h2>
-            <form id="questionsForm" >
-                <label for="question1">1. Where is the group travelling to?:</label>
-                <select id="question1">
-                    <option value="option1">Singapore</option>
-                    <option value="option2">Korea</option>
-                    <option value="option3">Japan</option>
-                </select>
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Step 1: Answer the following questions:</h2>
+        <form id="questionsForm" onsubmit="submitAnswers(event)">
+            <label for="question1">1. Where is the group travelling to?:</label>
+            <select id="question1" name="destination">
+                <option value="Singapore">Singapore</option>
+                <option value="Korea">Korea</option>
+                <option value="Japan">Japan</option>
+            </select>
 
-                <label for="question2">2. What is the duration of travel? (min:1 day, max:10days): <label>
-                <input type="number" id="question2" min="1" max="10"> days
-                
-                <label for="question3">2. How many people in the group? (min:2 pax, max: 6pax): <label>
-                <input type="number" id="question3" min="2" max="6"> pax
+            <label for="question2">2. What is the duration of travel? (min:1 day, max:15 days):</label>
+            <input type="number" id="question2" name="duration" min="1" max="15"> days
 
-                <button type="submit" onclick="submitAnswers()">Submit</button>
-            </form>
-        </div>
+            <label for="question3">3. How many people in the group? (min:2 pax, max: 6 pax):</label>
+            <input type="number" id="question3" name="people" min="2" max="6"> pax
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<!-- link to script.js -->
+<script src="script.js"></script>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
     <p> &copy; 2024 Jolin Ong. All rights reserved.<br/>
         This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website.</p>
