@@ -44,5 +44,19 @@
     <footer>
         <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const destination = urlParams.get('destination');
+        const duration = urlParams.get('duration');
+        const groupSize = urlParams.get('groupSize');
+    
+        console.log('Destination:', destination);
+        console.log('Duration:', duration);
+        console.log('Group Size:', groupSize);
+    </script>
+    
+
+
 </body>
 </html>
