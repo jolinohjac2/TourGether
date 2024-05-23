@@ -1,310 +1,286 @@
+/* Base styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    }
-  
-  .title-banner {
-    background-image:url("images/sky.jpg");
-    background-size: cover;
-    text-align: center;
-    padding: 10px 0;
-    color: rgb(36, 6, 87);
-    margin-left: calc((100% - 1000px) / 2); /* Adjust margin to center */
-    margin-right: calc((100% - 1000px) / 2); /* Adjust margin to center */
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.title-banner {
+  background-image: url("images/sky.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 20px 10px; /* Added padding for better spacing */
+  color: rgb(36, 6, 87);
+}
+
+.title-banner h1 {
+  margin: 0;
+  font-size: 3em; /* Adjusted for responsive font size */
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+}
+
+.title-banner p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  background-color: #b0d4f094;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 90%; /* Responsive width */
+  font-size: 1.5em; /* Adjusted for responsive font size */
+}
+
+.navigation-pane {
+  display: flex;
+  justify-content: center;
+  background-color: #5ea3ff;
+  padding: 10px 0;
+}
+
+.navigation-pane button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1em; /* Responsive font size */
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.navigation-pane button:hover {
+  background-color: #0056b3;
+}
+
+.introduction, .approach {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: aliceblue;
+  color: #333;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 90%;
+}
+
+.introduction h2, .approach h2 {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 2em; /* Responsive font size */
+  text-align: left;
+}
+
+.introduction p, .approach p {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1.2em; /* Responsive font size */
+  text-align: left;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards for smaller screens */
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 90%;
+  background-color: aliceblue;
+}
+
+.card {
+  background-color: white;
+  border: 5px dotted #500d8b;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+  width: 30%;
+  margin: 10px;
+  flex-grow: 1; /* Allow cards to grow equally */
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em; /* Responsive font size */
+}
+
+.card ol, .card p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 1em; /* Responsive font size */
+}
+
+.card img {
+  width: 100%;
+  max-height: 200px; /* Sets a maximum height for the images */
+  object-fit: contain; /* Ensures the entire image is visible without being cropped */
+  margin-bottom: 20px;
+}
+
+.start-section {
+  text-align: center;
+  padding: 50px 20px; /* Added padding for better spacing */
+  background-color: aliceblue;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.start-button {
+  background: linear-gradient(to bottom, #28a745, #218838);
+  color: white;
+  padding: 50px 20px; /* Adjusted padding for better spacing */
+  border: solid green;
+  border-radius: 50%;
+  font-size: 50px; /* Responsive font size */
+  cursor: pointer;
+  box-shadow: 0 5px #1e7e34, 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.start-button:hover {
+  background: linear-gradient(to bottom, #218838, #1e7e34);
+  box-shadow: 0 2px #1e7e34, 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(10px);
+}
+
+.start-button:active {
+  box-shadow: 0 1px #1e7e34, 0 1px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(10px);
+}
+
+.footer {
+  color: rgb(247, 237, 237);
+  text-align: left;
+  font-size: 1em; /* Responsive font size */
+  padding: 20px;
+  max-width: 90%;
+  margin: 20px auto;
+  background-color: #5ea4fff6;
+}
+
+@media (max-width: 768px) {
   .title-banner h1 {
-    margin: 0;
-    font-size: 100px; /* Adjust this value to increase font size */
-    font-family: "Special Elite", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    margin: 20px;
-  
+      font-size: 2em;
   }
-  
+
   .title-banner p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    background-color: #b0d4f094;
-    margin-bottom: 20px;
-    margin-left:100px;
-    margin-right:100px;
-  
-  
-    font-size: 28px; /* Adjust this value to increase font size */
+      font-size: 1.2em;
   }
-  
-  .navigation-pane {
-    display: flex;
-    justify-content: center;
-    background-color: #5ea3ff;
-   
-    margin-left: calc((100% - 1000px) / 2); /* Adjust margin to center */
-    margin-right: calc((100% - 1000px) / 2); /* Adjust margin to center */
-  }
-  
+
   .navigation-pane button {
-    font-family: "Roboto", sans-serif;
-    font-weight: 1000;
-    font-style: normal;
-    font-size: 20px;
-    margin: 25px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-   
+      font-size: 0.9em;
+      padding: 8px 16px;
   }
-  
-  .navigation-pane button:hover {
-    background-color: #0056b3;
+
+  .introduction h2, .approach h2 {
+      font-size: 1.5em;
   }
-  
-  .introduction {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color:aliceblue;
-    color: #333; /* Ensure text color is readable against the gradient */
-    margin-left: calc((100% - 1000px) / 2); /* Adjust margin to center */
-    margin-right: calc((100% - 1000px) / 2); /* Adjust margin to center */
+
+  .introduction p, .approach p {
+      font-size: 1em;
   }
-  
-  .approach {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color:aliceblue;
-    color: #333; /* Ensure text color is readable against the gradient */
-    margin-left: calc((100% - 1000px) / 2); /* Adjust margin to center */
-    margin-right: calc((100% - 1000px) / 2); /* Adjust margin to center */;
-    padding-bottom: 20px;
-  }
-  
-  .introduction h2{
-    max-width: calc(1000px - 20px); /* Adjusted to match the combined width of the cards */
-    margin: auto;
-    padding: 10px;
-    font-size: 30px;
-    text-align: left;
-    background-color: #ffffff00; /* Change color of the introduction paragraph */
-  }
-  
-  .introduction p{
-    max-width: calc(1000px - 20px); /* Adjusted to match the combined width of the cards */
-    margin: auto;
-    padding: 10px;
-    font-size: 18px;
-    text-align: left;
-    background-color: #ffffff00; /* Change color of the introduction paragraph */
-  }
-  
-  .approach h2{
-    max-width: calc(1000px - 20px); /* Adjusted to match the combined width of the cards */
-    margin: auto;
-    padding: 10px;
-    font-size: 30px;
-    text-align: left;
-    background-color: #ffffff00; /* Change color of the introduction paragraph */
-  }
-  
-  .approach p{
-    max-width: calc(1000px - 20px); /* Adjusted to match the combined width of the cards */
-    margin: auto;
-    padding: 10px;
-    font-size: 18px;
-    text-align: left;
-    background-color: #ffffff00; /* Change color of the introduction paragraph */
-  }
-  
+
   .card-section {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    max-width: 1000px;
-    background-color:aliceblue;
+      flex-direction: column;
+      align-items: center;
   }
-  
+
   .card {
-    background-color: white;
-    border: 5px dotted #500d8b;
-    padding: 20px;
-    border-radius: 20px; /* Adjust the value to control the roundness of the corners */
-    text-align: left; /* Align descriptions to the left */
-    text-justify: auto; /* Justify text within the width of the cards */
-    width: 30%;
+      width: 90%;
+      margin-bottom: 20px;
   }
-  
-  .card h3{
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
-  .card ol{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: 15px;
-  }
-  
-  .card p{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 10px;
-    font-size: 15px;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-  
-  .start-section {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color:aliceblue;
-    margin-left: calc((100% - 1000px) / 2); /* Adjust margin to center */
-    margin-right: calc((100% - 1000px) / 2); /* Adjust margin to center */
-  }
-  
+
   .start-button {
-    background: linear-gradient(to bottom, #28a745, #218838); /* Gradient background for 3D effect */
-    color: white;
-    padding: 50px 40px;
-    border: solid green;
-    border-radius: 60%;
-    font-size: 45px;
-    cursor: pointer;
-    box-shadow: 0 5px #1e7e34, 0 5px 10px rgba(0, 0, 0, 0.2); /* Box shadow for 3D effect */
-    transition: all 0.2s ease; /* Smooth transition for the hover effect */
+      padding: 15px 30px;
+      font-size: 1.5em;
   }
-  
-  .start-button:hover {
-    background: linear-gradient(to bottom, #218838, #1e7e34);
-    box-shadow: 0 2px #1e7e34, 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(10px); /* Push button down on hover */
-  }
-  
-  .start-button:active {
-    box-shadow: 0 1px #1e7e34, 0 1px 2px rgba(0, 0, 0, 0.2);
-    transform: translateY(10px); /* Further push button down on active */
-  }
-  
+
   .footer {
-    color: rgb(247, 237, 237);
-    text-align: left;
-    font-size: 14px;
-    padding: 100px 0;
-    margin: auto;
-    padding: 10px;
-    max-width: 1000px; /* Set the max width to match the width of other sections */
-    margin: 0 auto; /* Center the footer */
-    background-color:#5ea4fff6;
-  
+      font-size: 0.9em;
   }
-  
-  @media (max-width: 768px) {
-    .card-section {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .card {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-  }
-  
-  /* Popup form styling */
-  .popup-form {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(75, 136, 236, 0.856); /* Black background with transparency */
-    z-index: 1;
-  }
-  
-  .popup-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 2px solid #350dea;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-  }
-  
-  .popup-content h2 {
-    font-size: large;
-    margin-top: 0;
-  }
-  
-  .popup-content label {
-    display: block;
-    margin: 15px 0 5px;
-  }
-  
-  .popup-content input[type="number"] {
-    width: 55px; /* Adjusted width for smaller input boxes */
-    height: 30px; /* Increase height */
-    padding: 8px;
-    margin-bottom: 10px;
-    display: inline-block; /* To allow text next to it */
-    vertical-align: middle; /* Align with text */
-  }
-  
-  .popup-content span {
-    margin-left: 10px;
-    vertical-align: middle;
-  }
-  
-  .popup-content button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .popup-content button:hover {
-    background-color: #0056b3;
-  }
-  
-  .close {
-    color: #12111170;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+}
+
+/* Popup form styling */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(75, 136, 236, 0.856);
+  z-index: 1;
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #350dea;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.popup-content h2 {
+  font-size: large;
+  margin-top: 0;
+}
+
+.popup-content label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.popup-content input[type="number"] {
+  width: 55px;
+  height: 30px;
+  padding: 8px;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.popup-content span {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.popup-content button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+.close {
+  color: #12111170;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
