@@ -1,35 +1,28 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const exceljs = require('exceljs');
+// Needed for dotenv
+require("dotenv").config();
 
-const app = express();
-const port = 3000;
+// Needed for Express
+var express = require('express')
+var app = express()
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
+// Setting where the location of your EJS files are
+app.set('views', '.')
 
-// Define the /recommendations endpoint
-app.post('/recommendations', async (req, res) => {
-    const { destination, duration, groupSize } = req.body;
+// Needed for EJS
+app.set('view engine', 'ejs');
 
-    // Your code for processing recommendations
-    try {
-        // Read data from the Excel file and process recommendations
-        const workbook = new exceljs.Workbook();
-        await workbook.xlsx.readFile('TravelDB.xlsx');
+// Needed for public directory
+app.use(express.static(__dirname + '/public'));
 
-        // Process recommendations...
+// Needed for parsing form data
+app.use(express.json());      
+app.use(express.urlencoded({extended: true}));
 
-        // Redirect to result.html with query parameters
-        res.redirect(`/result.html?destination=${destination}&duration=${duration}&groupSize=${groupSize}`);
-    } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ message: 'Internal server error.' });
-    }
+// root page
+app.get('/public', function(req, res) {
+   res.render('index');
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+
+// Tells the app which port to run on
+app.listen(8080);

@@ -15,5 +15,5 @@ function submitAnswers(event) {
     const groupSize = document.getElementById('question3').value;
 
     // Redirect to results page with query parameters
-    window.location.href = `/results.html?destination=${destination}&duration=${duration}&groupSize=${groupSize}`;
+    window.location.href = `/result.html?destination=${destination}&duration=${duration}&groupSize=${groupSize}`;
 }
