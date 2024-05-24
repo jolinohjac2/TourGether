@@ -89,12 +89,18 @@ body {
   text-align: left;
 }
 
-.keyfeatures li {
-  margin: 10px 0;
-  margin-left: 100px 0;
+.keyfeatures ol {
   padding: 10px;
   font-size: 1.2em; /* Responsive font size */
   text-align: left;
+  list-style-position: inside; /* Move list numbers inside the padding of the list items */
+  margin-bottom: 10px;
+
+}
+
+.keyfeatures ol li{
+  margin-bottom: 10px;
+
 }
 
 
@@ -175,8 +181,8 @@ body {
   text-align: left;
   font-size: 1em; /* Responsive font size */
   padding: 2cap;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 100px;
+  padding-right: 100px;
   max-width: 100%;
   margin: 0px auto;
   background-color: #5ea4fff6;
