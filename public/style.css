@@ -35,7 +35,7 @@ body {
   background-color: #b0d4f094;
   margin: 20px auto;
   padding: 10px;
-  max-width: 90%; /* Responsive width */
+  max-width: 100%; /* Responsive width */
   font-size: 1.5em; /* Adjusted for responsive font size */
 }
 
@@ -70,8 +70,10 @@ body {
   color: #333;
   margin: 10px auto;
   padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-bottom: 1px;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .introduction h2, .approach h2, .problem h2, .solution h2, .keyfeatures h3 {
@@ -109,7 +111,9 @@ body {
   justify-content: space-around;
   margin: 0 auto;
   padding: 20px;
-  max-width: 90%;
+  padding-left:100px;
+  padding-right:100px;
+  max-width: 100%;
   background-color: aliceblue;
 }
 
