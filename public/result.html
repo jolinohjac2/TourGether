@@ -21,9 +21,10 @@
     <!-- Header (you can copy this from your home page) -->
 <!-- NAVIGATION PANE-->
 <nav class="navigation-pane">
-    <button onclick="location.href='page1.html'">ABOUT</button>
-    <button onclick="location.href='page3.html'">DESTINATIONS</button>
-    <button onclick="location.href='Public/contact.html'">CONTACT</button>
+    <button onclick="location.href='index.html'">HOME</button>
+    <button onclick="location.href='about.html'">ABOUT</button>
+    <button onclick="location.href=''">DESTINATIONS</button>
+    <button onclick="location.href='contact.html'">CONTACT</button>
 </nav>
 
 <!-- TITLE BANNER-->
@@ -35,28 +36,14 @@
     <!-- Main Content -->
     <main>
         <h1>Results</h1>
-        <div id="results-container">
-            <!-- Results will be displayed here -->
-        </div>
-    </main>
+        <div id="results"></div>
+    
+        <script src="script.js"></script>
 
-    <!-- Footer (you can copy this from your home page) -->
+        <!-- Footer (you can copy this from your home page) -->
     <footer>
         <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </footer>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const destination = urlParams.get('destination');
-        const duration = urlParams.get('duration');
-        const groupSize = urlParams.get('groupSize');
-    
-        console.log('Destination:', destination);
-        console.log('Duration:', duration);
-        console.log('Group Size:', groupSize);
-    </script>
-    
-
 
 </body>
 </html>
