@@ -23,7 +23,7 @@ body {
 
 .title-banner h1 {
   margin: 0;
-  font-size: 5em; /* Adjusted for responsive font size */
+  font-size: 6em; /* Adjusted for responsive font size */
   font-family: "Special Elite", system-ui;
   font-weight: 400;
 }
@@ -63,29 +63,40 @@ body {
   background-color: #0056b3;
 }
 
-.introduction, .approach {
+.introduction, .approach, .problem, .solution, .keyfeatures {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: aliceblue;
   color: #333;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 10px auto;
+  padding: 10px;
+  padding-bottom: 1px;
   max-width: 90%;
 }
 
-.introduction h2, .approach h2 {
+.introduction h2, .approach h2, .problem h2, .solution h2, .keyfeatures h3 {
   margin: 10px 0;
   padding: 10px;
+  padding-top: 1px;
   font-size: 2em; /* Responsive font size */
   text-align: left;
 }
 
-.introduction p, .approach p {
+.introduction p, .approach p, .problem p, .solution p{
   margin: 10px 0;
   padding: 10px;
   font-size: 1.2em; /* Responsive font size */
   text-align: left;
 }
+
+.keyfeatures li {
+  margin: 10px 0;
+  margin-left: 100px 0;
+  padding: 10px;
+  font-size: 1.2em; /* Responsive font size */
+  text-align: left;
+}
+
 
 .card-section {
   display: flex;
@@ -163,9 +174,11 @@ body {
   color: rgb(247, 237, 237);
   text-align: left;
   font-size: 1em; /* Responsive font size */
-  padding: 20px;
-  max-width: 90%;
-  margin: 20px auto;
+  padding: 2cap;
+  padding-left: 120px;
+  padding-right: 120px;
+  max-width: 100%;
+  margin: 0px auto;
   background-color: #5ea4fff6;
 }
 
