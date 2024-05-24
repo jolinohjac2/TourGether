@@ -1,23 +1,33 @@
-//Open popup form
 function openPopup() {
     document.getElementById('popupForm').style.display = 'block';
 }
 
-//Close popup form
 function closePopup() {
     document.getElementById('popupForm').style.display = 'none';
 }
 
-//Submit form to trigger event
-function submitAnswers(event) {
-    event.preventDefault();
-    console.log('Form submitted!'); // Add this line for logging
+document.getElementById('questionsForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-// Collect form data and define
+    // Get form data
     const destination = document.getElementById('question1').value;
     const duration = document.getElementById('question2').value;
-    const groupSize = document.getElementById('question3').value;
 
-// Redirect to results page with query parameters
-     window.location.href = `/result.html?destination=${destination}&duration=${duration}&groupSize=${groupSize}`;
+    // Define the conditions for redirection
+    let redirectUrl = '';
+
+    // Check the values of the form inputs and set the redirect URL accordingly
+    if (destination === 'Singapore' && duration === '1') {
+        redirectUrl = 'result_singapore_1.html';
+    } else if (destination === 'Singapore' && duration === '2') {
+        redirectUrl = 'result_singapore_2.html';
+    } else if (destination === 'Bangkok' && duration === '1') {
+        redirectUrl = 'result_bangkok_1.html';
+    } else {
+        // If none of the conditions match, redirect to a default page
+        redirectUrl = 'default_result.html';
     }
+
+    // Redirect to the determined URL
+    window.location.href = redirectUrl;
+});

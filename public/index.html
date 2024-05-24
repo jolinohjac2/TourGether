@@ -77,10 +77,11 @@
 </div>
 
 <!-- Popup form -->
-<div id="popupForm" class="popup-form">
+<div id="popupForm" class="popup-form" style="display: none;">
     <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>
         <h2>Step 1: Answer the following questions:</h2>
+        <form id="questionsForm">
             <label for="question1">1. Where is the group travelling to (Please input a city)?:</label>
             <select id="question1" name="destination">
                 <option value="Singapore">Singapore</option>
@@ -95,8 +96,6 @@
             <input type="number" id="question3" name="people" min="2" max="6"> pax
 
             <button type="submit">Submit</button>
-<form id="questionsForm" onsubmit="submitAnswers(event)">
-
         </form>
     </div>
 </div>

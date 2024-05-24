@@ -103,7 +103,6 @@ body {
 
 }
 
-
 .card-section {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping of cards for smaller screens */
@@ -302,4 +301,48 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.Table {
+  padding-top: 20px;
+  padding-bottom:20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.Table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.Table h2 {
+  margin-bottom: 20px;
+}
+
+.Table table caption {
+  padding-bottom: 10px;
+}
+
+.Table th, .Table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+.Table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.Table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.Table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.Table td:nth-child(4), .Table td:nth-child(5), .Table td:nth-child(6), .Table td:nth-child(7) {
+  text-transform: capitalize;
 }
