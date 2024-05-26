@@ -360,25 +360,28 @@ body {
 }
 /* Styling for the button container */
 .top-right-button {
-  position: absolute; /* Allows positioning relative to the header */
-  margin-top:350px;
-  top: 30px; /* Adjust based on your header padding */
-  right: 100px; /* Adjust based on your header padding */
+  position: fixed; /* Fixed positioning */
+  top: 320px; /* Distance from top */
+  right: 20px; /* Distance from right */
+  z-index: 999; /* Ensure buttons appear above other content */
+  padding: 10px; /* Add padding to create space around the buttons */
 }
 
-/* Styling for the "Next Step" button */
-.next-step-button {
+/* Styling for the buttons */
+.next-step-button,
+.consolidate-button {
   background-color: #28a745; /* Green background color */
   color: white; /* White text */
   padding: 10px 20px; /* Padding for the button */
   text-decoration: none; /* Remove underline from link */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 2em; /* Font size */
+  border-radius: 2.5px; /* Rounded corners */
+  font-size: em; /* Font size */
   font-weight: bold; /* Bold text */
-}
+  cursor: pointer;
 }
 
-/* Hover effect for the button */
-.next-step-button:hover {
+/* Hover effect for the buttons */
+.next-step-button:hover,
+.consolidate-button:hover {
   background-color: #218838; /* Darker green on hover */
 }

@@ -32,10 +32,9 @@
     <p> “A journey well shared is a journey well enjoyed.” -Anonymous </p>
 </header>
 
-<!-- Button to Next Step (Voting) -->
+<!-- Button to Consolidate (Voting) -->
 <div class="top-right-button">
-  <a href="Voting_SG_1day_3pax.html" class="next-step-button">Consolidate!</a>
-
+  <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
 </div>
 
 <!-- TABLE-->
@@ -46,7 +45,7 @@
         [Note: Reminder that there is only 24 hours in a day and you can only have about <strong>10 hours of activity</strong>, so choose wisely! <strong>If the average time spent at an attraction is a full day, you should only select that place (Rank as #1) and leave the rest blank.</strong>]
         </p>
 
-        <table>
+        <table id="myTable">
             <caption> Recommended Places of Interest</caption>
             <tr>
                 <th>No.</th>
@@ -64,6 +63,7 @@
                 <td>Marina Bay Sands</td>
                 <td>2-3 hours</td>
                 <td><select>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -72,6 +72,7 @@
                 </select>
                 </td>
                 <td><select>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -80,6 +81,7 @@
                 </select>
                 </td>
                 <td><select>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -250,14 +252,79 @@
         </table>
 
 </section>
-
-
     
 <!-- FOOTER -->
 <footer class="footer">
     <p> &copy; 2024 Jolin Ong. All rights reserved. This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website.</p>
 
-
-
+    <script>
+      function consolidateVotes() {
+          var table = document.getElementById("myTable");
+          var headerRow = table.getElementsByTagName("tr")[0];
+          var totalPointsHeader = document.createElement("th");
+          totalPointsHeader.textContent = "Total Points";
+          headerRow.appendChild(totalPointsHeader);
+  
+          var rankingHeader = document.createElement("th");
+          rankingHeader.textContent = "Ranking";
+          headerRow.appendChild(rankingHeader);
+  
+          var rows = table.getElementsByTagName("tr");
+          for (var i = 1; i < rows.length; i++) {
+              var totalPoints = 0;
+              var cells = rows[i].getElementsByTagName("td");
+              for (var j = 3; j < cells.length - 1; j++) {
+                  var value = parseInt(cells[j].querySelector("select").value);
+                  totalPoints += calculatePoints(value);
+              }
+              var totalPointsCell = document.createElement("td");
+              totalPointsCell.textContent = totalPoints;
+              rows[i].appendChild(totalPointsCell);
+  
+              var rankingCell = document.createElement("td");
+              rankingCell.textContent = i; // Initialize ranking as row number
+              rows[i].appendChild(rankingCell);
+          }
+  
+          updateRankings();
+      }
+  
+      function calculatePoints(value) {
+          switch (value) {
+              case 1:
+                  return 100;
+              case 2:
+                  return 90;
+              case 3:
+                  return 80;
+              case 4:
+                  return 70;
+              case 5:
+                  return 60;
+              default:
+                  return 0;
+          }
+      }
+  
+      function updateRankings() {
+          var table = document.getElementById("myTable");
+          var rows = table.getElementsByTagName("tr");
+  
+          // Sort rows based on total points
+          var sortedRows = Array.from(rows).slice(1).sort(function(a, b) {
+              return parseInt(b.cells[b.cells.length - 2].textContent) - parseInt(a.cells[a.cells.length - 2].textContent);
+          });
+  
+          // Update rankings based on sorted rows
+          for (var i = 0; i < sortedRows.length; i++) {
+              sortedRows[i].cells[sortedRows[i].cells.length - 1].textContent = i + 1;
+          }
+      }
+  </script>
+  
+  
+  
+  
+  
 </body>
 </html>

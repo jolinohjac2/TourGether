@@ -32,3 +32,4 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
     // Redirect to the determined URL
     window.location.href = redirectUrl;
 });
+
