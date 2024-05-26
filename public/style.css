@@ -367,7 +367,7 @@ body {
   padding: 10px; /* Add padding to create space around the buttons */
 }
 
-/* Styling for the buttons */
+/* Styling for both buttons */
 .next-step-button,
 .consolidate-button {
   background-color: #28a745; /* Green background color */
@@ -375,12 +375,13 @@ body {
   padding: 10px 20px; /* Padding for the button */
   text-decoration: none; /* Remove underline from link */
   border-radius: 2.5px; /* Rounded corners */
-  font-size: em; /* Font size */
+  font-size: 1em; /* Font size */
   font-weight: bold; /* Bold text */
   cursor: pointer;
+  border: none; /* Remove border */
 }
 
-/* Hover effect for the buttons */
+/* Hover effect for both buttons */
 .next-step-button:hover,
 .consolidate-button:hover {
   background-color: #218838; /* Darker green on hover */

@@ -37,6 +37,11 @@
   <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
 </div>
 
+<!-- Button to Reorder based on Ranking -->
+<div id="reorderButtonContainer" class="top-right-button" style="display: none;">
+  <button id="reorderButton" class="next-step-button" onclick="reorderTable()">Reorder based on Ranking</button>
+</div>
+
 <!-- TABLE-->
 <section class="Table">
     <h2>Time to Vote!</h2>
@@ -287,6 +292,8 @@
           }
   
           updateRankings();
+          document.getElementById("consolidateButton").style.display = "none";
+          document.getElementById("reorderButtonContainer").style.display = "block";
       }
   
       function calculatePoints(value) {
@@ -296,7 +303,7 @@
               case 2:
                   return 90;
               case 3:
-                  return 80;
+              return 80;
               case 4:
                   return 70;
               case 5:
@@ -320,8 +327,31 @@
               sortedRows[i].cells[sortedRows[i].cells.length - 1].textContent = i + 1;
           }
       }
+
+      function reorderTable() {
+          var table = document.getElementById("myTable");
+          var rows = table.getElementsByTagName("tr");
+
+          // Convert HTMLCollection to array
+          var rowsArray = Array.from(rows);
+
+          // Sort rows based on ranking column
+          rowsArray.sort(function(a, b) {
+              var rankingA = parseInt(a.cells[a.cells.length - 1].textContent);
+              var rankingB = parseInt(b.cells[b.cells.length - 1].textContent);
+              return rankingA - rankingB;
+          });
+
+          // Reorder rows in the table body
+          var tbody = table.querySelector("tbody");
+          rowsArray.forEach(function(row) {
+              tbody.appendChild(row);
+          });
+      }
   </script>
-  
+</body>
+</html>
+
   
   
   
