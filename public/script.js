@@ -20,8 +20,10 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
     // Check the values of the form inputs and set the redirect URL accordingly
     if (destination === 'Singapore' && duration === '1' && people === '3') {
         redirectUrl = 'result_singapore_1_3pax.html';
-    } else if (destination === 'Singapore' && duration === '2') {
-        redirectUrl = 'result_singapore_2.html';
+    
+    } else if (destination === 'Singapore' && duration === '1' && people === '4') {
+        redirectUrl = 'result_singapore_1_4pax.html';
+        
     } else if (destination === 'Bangkok' && duration === '1') {
         redirectUrl = 'result_bangkok_1.html';
     } else {
@@ -32,4 +34,5 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
     // Redirect to the determined URL
     window.location.href = redirectUrl;
 });
+
 
