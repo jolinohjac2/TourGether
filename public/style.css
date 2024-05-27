@@ -376,7 +376,7 @@ body {
 /* Styling for the button container */
 .top-right-button {
   position: fixed; /* Fixed positioning */
-  top: 320px; /* Distance from top */
+  top: 305px; /* Distance from top */
   right: 20px; /* Distance from right */
   z-index: 999; /* Ensure buttons appear above other content */
   padding: 10px; /* Add padding to create space around the buttons */
@@ -390,7 +390,7 @@ body {
   padding: 10px 20px; /* Padding for the button */
   text-decoration: none; /* Remove underline from link */
   border-radius: 2.5px; /* Rounded corners */
-  font-size: 1em; /* Font size */
+  font-size: 1.2em; /* Font size */
   font-weight: bold; /* Bold text */
   cursor: pointer;
   border: none; /* Remove border */
