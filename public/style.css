@@ -339,7 +339,8 @@ body {
 }
 
 .Table p {
-  padding-right: 200px;
+  padding-right: 100px;
+  text-align:justify;
 }
 
 .Table table caption {

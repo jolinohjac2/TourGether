@@ -26,6 +26,12 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
 
     } else if (destination === 'Bangkok' && duration === '1' && people === '3') {
         redirectUrl = 'result_bangkok_1_3pax.html';
+    
+    } else if (destination === 'Bangkok' && duration === '5' && people === '3') {
+        redirectUrl = 'result_bangkok_5_3pax.html';   
+
+    } else if (destination === 'Bangkok' && duration === '5' && people === '6') {
+        redirectUrl = 'result_bangkok_5_6pax.html'; 
 
     } else {
         // If none of the conditions match, redirect to a default page
