@@ -1,11 +1,15 @@
+
+// Function to OPEN Popup
 function openPopup() {
     document.getElementById('popupForm').style.display = 'block';
 }
 
+// Function to CLOSE Popup
 function closePopup() {
     document.getElementById('popupForm').style.display = 'none';
 }
 
+// Form Submission Event Listener
 document.getElementById('questionsForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -41,5 +45,3 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
     // Redirect to the determined URL
     window.location.href = redirectUrl;
 });
-
-
