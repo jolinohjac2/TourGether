@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>1 Day in Singapore</title>
+        <title>1 Day in Bangkok</title>
         <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
     
          <!-- Link to Google Font (title banner) -->
@@ -22,31 +22,35 @@
 <nav class="navigation-pane">
     <button onclick="location.href='index.html'">HOME</button>
     <button onclick="location.href='about.html'">ABOUT</button>
-    <button onclick="location.href=''">DESTINATIONS</button>
+    <button onclick="location.href='destination.html'">DESTINATIONS</button>
     <button onclick="location.href='contact.html'">CONTACT</button>
 </nav>
     
 <!-- TITLE BANNER-->
 <header class="title-banner">
-    <h1> TourGether </h1>
+    <h1> TourGether! </h1>
     <p> “A journey well shared is a journey well enjoyed.” -Anonymous </p>
 </header>
 
-<!-- Button to Next Step (Voting) -->
+<!-- Button to Consolidate (Voting) -->
 <div class="top-right-button">
-  <a href="Voting_SG_1day_3pax.html" class="next-step-button">Consolidate!</a>
+  <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
+</div>
 
+<!-- Button to Reorder based on Ranking -->
+<div id="reorderButtonContainer" class="top-right-button" style="display: none;">
+  <button id="reorderButton" class="next-step-button" onclick="reorderTable()">Reorder based on Ranking</button>
 </div>
 
 <!-- TABLE-->
 <section class="Table">
     <h2>Time to Vote!</h2>
-        <p> Each member of the group is to tick 5 places he/she wants to go and rank them from 1 to 5. <br/><br/>
-        Rank #1 is the one you want to go the most, while #5 is the one you would like to go but are ok to forgo if the circumstances do not permit. <br/><br/>
-        [Note: Reminder that there is only 24 hours in a day and you can only have about <strong>10 hours of activity</strong>, so choose wisely! If the average time spent at an attraction is a full day, you should only select that place (Rank as #1) and leave the rest blank]
+        <p> Each member of the group shall choose and rank the places they would like to visit. <br/><br/>
+        The place that you rank as #1 is the one you want to go the most, while #6 is the one you ok to forgo. <br/><br/>
+        [Note: Reminder that there is only 24 hours in a day and you can only have about <strong>10 hours of activity</strong>, so choose wisely! <strong>If the average time spent at an attraction is a full day, you should only select that place (Rank as #1) and leave the rest blank.</strong>]
         </p>
 
-        <table>
+        <table id="myTable">
             <caption> Recommended Places of Interest</caption>
             <tr>
                 <th>No.</th>
@@ -61,9 +65,10 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Marina Bay Sands</td>
+                <td>Grand Palace</td>
                 <td>2-3 hours</td>
                 <td><select>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -72,6 +77,7 @@
                 </select>
                 </td>
                 <td><select>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -80,6 +86,7 @@
                 </select>
                 </td>
                 <td><select>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -91,8 +98,8 @@
               <!-- Add the rest of the rows here -->
               <tr>
                 <td>2</td>
-                <td>Gardens by the Bay</td>
-                <td>2-3 hours</td>
+                <td>Wat Pho (Temple of the Reclining Buddha)</td>
+                <td>1-2 hours</td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -123,8 +130,8 @@
               </tr>
               <tr>
                 <td>3</td>
-                <td>Sentosa Island</td>
-                <td>Full day</td>
+                <td>Arun (Temple of Dawn)</td>
+                <td>1-2 hrs</td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -155,7 +162,7 @@
               </tr>
               <tr>
                 <td>4</td>
-                <td>Singapore Zoo</td>
+                <td>Chatuchak Weekend Market</td>
                 <td>3-4 hours</td>
                 <td><select>
                   <option value="0">0</option>
@@ -186,8 +193,8 @@
               </tr>
               <tr>
                 <td>5</td>
-                <td>Universal Studios Singapore</td>
-                <td>Full day</td>
+                <td>Chinatown</td>
+                <td>2-3hrs</td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -214,20 +221,171 @@
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </select>
-               
               </tr>
-            </tbody>
+              <tr>
+                <td>6</td>
+                <td>Jim Thompson House</td>
+                <td>Half day</td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </tr>
+
+              <td>7</td>
+                <td>Wat Saket (Golden Mount)</td>
+                <td>1-2hrs</td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </tr>
+              </tbody>
         </table>
 
 </section>
-
-
     
 <!-- FOOTER -->
 <footer class="footer">
     <p> &copy; 2024 Jolin Ong. All rights reserved. This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website.</p>
 
+    <script>
+      function consolidateVotes() {
+          var table = document.getElementById("myTable");
+          var headerRow = table.getElementsByTagName("tr")[0];
+          var totalPointsHeader = document.createElement("th");
+          totalPointsHeader.textContent = "Total Points";
+          headerRow.appendChild(totalPointsHeader);
+  
+          var rankingHeader = document.createElement("th");
+          rankingHeader.textContent = "Ranking";
+          headerRow.appendChild(rankingHeader);
+  
+          var rows = table.getElementsByTagName("tr");
+          for (var i = 1; i < rows.length; i++) {
+              var totalPoints = 0;
+              var cells = rows[i].getElementsByTagName("td");
+              for (var j = 3; j < cells.length - 1; j++) {
+                  var value = parseInt(cells[j].querySelector("select").value);
+                  totalPoints += calculatePoints(value);
+              }
+              var totalPointsCell = document.createElement("td");
+              totalPointsCell.textContent = totalPoints;
+              rows[i].appendChild(totalPointsCell);
+  
+              var rankingCell = document.createElement("td");
+              rankingCell.textContent = i; // Initialize ranking as row number
+              rows[i].appendChild(rankingCell);
+          }
+  
+          updateRankings();
+          document.getElementById("consolidateButton").style.display = "none";
+          document.getElementById("reorderButtonContainer").style.display = "block";
+      }
+  
+      function calculatePoints(value) {
+          switch (value) {
+              case 1:
+                  return 100;
+              case 2:
+                  return 90;
+              case 3:
+              return 80;
+              case 4:
+                  return 70;
+              case 5:
+                  return 60;
+              default:
+                  return 0;
+          }
+      }
+  
+      function updateRankings() {
+          var table = document.getElementById("myTable");
+          var rows = table.getElementsByTagName("tr");
+  
+          // Sort rows based on total points
+          var sortedRows = Array.from(rows).slice(1).sort(function(a, b) {
+              return parseInt(b.cells[b.cells.length - 2].textContent) - parseInt(a.cells[a.cells.length - 2].textContent);
+          });
+  
+          // Update rankings based on sorted rows
+          for (var i = 0; i < sortedRows.length; i++) {
+              sortedRows[i].cells[sortedRows[i].cells.length - 1].textContent = i + 1;
+          }
+      }
 
+      function reorderTable() {
+          var table = document.getElementById("myTable");
+          var rows = table.getElementsByTagName("tr");
 
+          // Convert HTMLCollection to array
+          var rowsArray = Array.from(rows);
+
+          // Sort rows based on ranking column
+          rowsArray.sort(function(a, b) {
+              var rankingA = parseInt(a.cells[a.cells.length - 1].textContent);
+              var rankingB = parseInt(b.cells[b.cells.length - 1].textContent);
+              return rankingA - rankingB;
+          });
+
+          // Reorder rows in the table body
+          var tbody = table.querySelector("tbody");
+          rowsArray.forEach(function(row) {
+              tbody.appendChild(row);
+          });
+      }
+  </script>
+</body>
+</html>
+
+  
+  
+  
+  
 </body>
 </html>

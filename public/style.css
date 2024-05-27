@@ -324,6 +324,20 @@ body {
   margin-bottom: 20px;
 }
 
+/* Styling of Budget Categories */
+.Table h4 {
+  margin-top:20px;
+  margin-bottom: 1px;
+}
+
+.Table ul {
+  padding: 10px;
+  font-size: 0.9em; /* Responsive font size */
+  text-align: left;
+  list-style-position: inside; /* Move list numbers inside the padding of the list items */
+  margin-bottom: 10px;
+}
+
 .Table p {
   padding-right: 200px;
 }
@@ -386,3 +400,4 @@ body {
 .consolidate-button:hover {
   background-color: #218838; /* Darker green on hover */
 }
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
+        <title>Destinations</title>
         <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
     
          <!-- Link to Google Font (title banner) -->
@@ -15,7 +15,27 @@
          <link rel="preconnect" href="https://fonts.googleapis.com">
          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&family=Titan+One&family=Zeyada&display=swap" rel="stylesheet">
-</head>
+
+         <style>
+            /* Styles for search bar */
+            #search-container {
+                margin-bottom: 20px;
+            }
+    
+            #search-input {
+                padding: 8px;
+                width: 300px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            /* Styles for filters */
+            .filter {
+                margin-right: 10px;
+            }
+        </style>
+
+        </head>
 
 <body>
 <!-- NAVIGATION PANE-->
@@ -28,15 +48,75 @@
     
 <!-- TITLE BANNER-->
 <header class="title-banner">
-    <h1> TourGether </h1>
+    <h1> TourGether! </h1>
     <p> “A journey well shared is a journey well enjoyed.” -Anonymous </p>
 </header>
 
 <!-- INTRODUCTION-->
 <section class="introduction">
     <h2>Destinations</h2>
-        <p>Singapore</p>
-        <p>Bangkok</p>
+            <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button onclick="search()">Search</button>
+        </div>
+    
+        <div id="filter-container">
+            <label for="category-filter" class="filter">Category:</label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="cultural">Cultural</option>
+                <option value="shopping">Shopping</option>
+                <option value="scenic">Scenic</option>
+                <option value="leisure">Leisure</option>
+            </select>
+        </div>
+    
+        <div id="results-container">
+            <!-- Results will be displayed here -->
+        </div>
+    
+        <script>
+            // Function to filter places based on category
+            function filterByCategory(category) {
+                if (category === 'all') {
+                    return places;
+                } else {
+                    return places.filter(place => place.category === category);
+                }
+            }
+    
+            // Function to display search results
+            function displayResults(results) {
+                const resultsContainer = document.getElementById('results-container');
+                resultsContainer.innerHTML = '';
+    
+                results.forEach(place => {
+                    const placeElement = document.createElement('div');
+                    placeElement.textContent = place.name;
+                    resultsContainer.appendChild(placeElement);
+                });
+            }
+    
+            // Function to handle search
+            function search() {
+                const searchTerm = document.getElementById('search-input').value.toLowerCase();
+                const categoryFilter = document.getElementById('category-filter').value;
+    
+                let filteredResults = filterByCategory(categoryFilter);
+    
+                if (searchTerm) {
+                    filteredResults = filteredResults.filter(place => place.name.toLowerCase().includes(searchTerm));
+                }
+    
+                displayResults(filteredResults);
+            }
+    
+            // Initial display of results
+            displayResults(places);
+        </script>    
+
+
+
         <img src="/images/underconstruction.jpg" alt="Image 2">
 </section>
 
