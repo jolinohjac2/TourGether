@@ -63,6 +63,12 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
 
     } else if (destination === 'Bangkok' && duration === '4' && people === '3') {
         redirectUrl = 'result_bangkok_3_3pax.html';
+    } else if (destination === 'Bangkok' && duration === '4' && people === '4') {
+        redirectUrl = 'result_bangkok_3_4pax.html';
+    } else if (destination === 'Bangkok' && duration === '4' && people === '5') {
+        redirectUrl = 'result_bangkok_3_5pax.html';
+    } else if (destination === 'Bangkok' && duration === '4' && people === '6') {
+        redirectUrl = 'result_bangkok_3_6pax.html';
     
     } else if (destination === 'Bangkok' && duration === '5' && people === '3') {
         redirectUrl = 'result_bangkok_5_3pax.html';   
