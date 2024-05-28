@@ -32,21 +32,12 @@
     <p> “A journey well shared is a journey well enjoyed.” -Anonymous </p>
 </header>
 
-<!-- Button to Consolidate (Voting) -->
-<div class="top-right-button">
-  <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
-</div>
-
-<!-- Button to Reorder based on Ranking -->
-<div id="reorderButtonContainer" class="top-right-button" style="display: none;">
-  <button id="reorderButton" class="next-step-button" onclick="reorderTable()">Reorder based on Ranking</button>
-</div>
-
+<div class="content">
 <!-- TABLE-->
 <section class="Table">
     <h2>Time to Vote!</h2>
         <p> Each member of the group shall choose and rank the places they would like to visit. <br/><br/>
-        The place that you rank as #1 is the one you want to go the most, while #6 is the one you ok to forgo. <br/><br/>
+          The place that you rank as #1 is the one you want to go the most, while leavint it as "0" means you are ok to forgo. <br/><br/>
         [Note: Reminder that there is only 24 hours in a day and you can only have about <strong>10 hours of activity</strong>, so choose wisely! <strong>If the average time spent at an attraction is a full day, you should only select that place (Rank as #1) and leave the rest blank.</strong>]
         </p>
 
@@ -505,6 +496,15 @@
         </table>
 
 </section>
+</div>
+
+<!-- Buttons at the bottom of the page -->
+<div class="bottom-button-container">
+  <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
+  <div id="reorderButtonContainer" style="display: none;">
+      <button id="reorderButton" class="next-step-button" onclick="reorderTable()">Reorder based on Ranking</button>
+  </div>
+</div>
     
 <!-- FOOTER -->
 <footer class="footer">
@@ -597,12 +597,5 @@
           });
       }
   </script>
-</body>
-</html>
-
-  
-  
-  
-  
 </body>
 </html>

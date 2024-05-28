@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>1 Day in Singapore</title>
+        <title>1 Day in Bangkok</title>
         <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
     
          <!-- Link to Google Font (title banner) -->
@@ -32,21 +32,12 @@
     <p> “A journey well shared is a journey well enjoyed.” -Anonymous </p>
 </header>
 
-<!-- Button to Consolidate (Voting) -->
-<div class="top-right-button">
-  <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
-</div>
-
-<!-- Button to Reorder based on Ranking -->
-<div id="reorderButtonContainer" class="top-right-button" style="display: none;">
-  <button id="reorderButton" class="next-step-button" onclick="reorderTable()">Reorder based on Ranking</button>
-</div>
-
+<div class="content">
 <!-- TABLE-->
 <section class="Table">
     <h2>Time to Vote!</h2>
         <p> Each member of the group shall choose and rank the places they would like to visit. <br/><br/>
-          The place that you rank as #1 is the one you want to go the most, while leavint it as "0" means you are ok to forgo. <br/><br/>
+        The place that you rank as #1 is the one you want to go the most, while leavint it as "0" means you are ok to forgo. <br/><br/>
         [Note: Reminder that there is only 24 hours in a day and you can only have about <strong>10 hours of activity</strong>, so choose wisely! <strong>If the average time spent at an attraction is a full day, you should only select that place (Rank as #1) and leave the rest blank.</strong>]
         </p>
 
@@ -59,14 +50,24 @@
                 <th>Person 1</th>
                 <th>Person 2</th>
                 <th>Person 3</th>
+                <th>Person 4</th>
 
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Marina Bay Sands</td>
+                <td>Grand Palace</td>
                 <td>2-3 hours</td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -98,8 +99,8 @@
               <!-- Add the rest of the rows here -->
               <tr>
                 <td>2</td>
-                <td>Gardens by the Bay</td>
-                <td>2-3 hours</td>
+                <td>Wat Pho (Temple of the Reclining Buddha)</td>
+                <td>1-2 hours</td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -109,6 +110,14 @@
                   <option value="5">5</option>
                 </select>
                 </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -130,8 +139,8 @@
               </tr>
               <tr>
                 <td>3</td>
-                <td>Sentosa Island</td>
-                <td>Full day</td>
+                <td>Arun (Temple of Dawn)</td>
+                <td>1-2 hrs</td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -139,7 +148,7 @@
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                </select>
+                </select>        
                 </td>
                 <td><select>
                   <option value="0">0</option>
@@ -158,11 +167,19 @@
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </select>
-              
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
               </tr>
               <tr>
                 <td>4</td>
-                <td>Singapore Zoo</td>
+                <td>Chatuchak Weekend Market</td>
                 <td>3-4 hours</td>
                 <td><select>
                   <option value="0">0</option>
@@ -190,11 +207,19 @@
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </select>
-              </tr>
+              <td><select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              </td>
               <tr>
                 <td>5</td>
-                <td>Universal Studios Singapore</td>
-                <td>Full day</td>
+                <td>Chinatown</td>
+                <td>2-3hrs</td>
                 <td><select>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -221,10 +246,19 @@
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </select>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
               </tr>
               <tr>
                 <td>6</td>
-                <td>Orchard Road</td>
+                <td>Jim Thompson House</td>
                 <td>Half day</td>
                 <td><select>
                   <option value="0">0</option>
@@ -252,12 +286,70 @@
                   <option value="4">4</option>
                   <option value="5">5</option>
                 </select>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+              </tr>
+
+              <td>7</td>
+                <td>Wat Saket (Golden Mount)</td>
+                <td>1-2hrs</td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <td><select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                </td>
               </tr>
               </tbody>
         </table>
 
 </section>
-    
+</div>    
+
+<!-- Buttons at the bottom of the page -->
+<div class="bottom-button-container">
+  <button id="consolidateButton" class="next-step-button" onclick="consolidateVotes()">Consolidate!</button>
+  <div id="reorderButtonContainer" style="display: none;">
+      <button id="reorderButton" class="next-step-button" onclick="reorderTable()">Reorder based on Ranking</button>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
     <p> &copy; 2024 Jolin Ong. All rights reserved. This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website.</p>
@@ -349,12 +441,5 @@
           });
       }
   </script>
-</body>
-</html>
-
-  
-  
-  
-  
 </body>
 </html>

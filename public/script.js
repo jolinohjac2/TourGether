@@ -30,6 +30,39 @@ document.getElementById('questionsForm').addEventListener('submit', function(eve
 
     } else if (destination === 'Bangkok' && duration === '1' && people === '3') {
         redirectUrl = 'result_bangkok_1_3pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '1' && people === '4') {
+        redirectUrl = 'result_bangkok_1_4pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '1' && people === '5') {
+        redirectUrl = 'result_bangkok_1_5pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '1' && people === '6') {
+        redirectUrl = 'result_bangkok_1_6pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '2' && people === '3') {
+        redirectUrl = 'result_bangkok_2_3pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '2' && people === '4') {
+        redirectUrl = 'result_bangkok_2_4pax.html';
+        
+    } else if (destination === 'Bangkok' && duration === '2' && people === '5') {
+        redirectUrl = 'result_bangkok_2_5pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '2' && people === '6') {
+        redirectUrl = 'result_bangkok_2_6pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '3' && people === '3') {
+        redirectUrl = 'result_bangkok_3_3pax.html';
+    } else if (destination === 'Bangkok' && duration === '3' && people === '4') {
+        redirectUrl = 'result_bangkok_3_4pax.html';
+    } else if (destination === 'Bangkok' && duration === '3' && people === '5') {
+        redirectUrl = 'result_bangkok_3_5pax.html';
+    } else if (destination === 'Bangkok' && duration === '3' && people === '6') {
+        redirectUrl = 'result_bangkok_3_6pax.html';
+
+    } else if (destination === 'Bangkok' && duration === '4' && people === '3') {
+        redirectUrl = 'result_bangkok_3_3pax.html';
     
     } else if (destination === 'Bangkok' && duration === '5' && people === '3') {
         redirectUrl = 'result_bangkok_5_3pax.html';   
